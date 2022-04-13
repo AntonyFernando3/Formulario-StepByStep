@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.png" type="imagem/x-icon">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    
+<div class="container">
+    
+   <form id="Form1">
+
+    <div class="imagem1">
+    <center><img src="proa-logo.png"></center>
+    <br><br>
+    </div>
+
+       <h3>CRIE SUA CONTA</h3>
+       <input type="text" placeholder="Email" required>
+       <input type="password" placeholder="Senha" required>
+       <input type="password" placeholder="Repita a Senha" required>
+
+       <div class="btn-box">
+          <button type="button" id="Next1">Proseguir</button> 
+       </div> 
+
+   </form>
+
+   <form id="Form2">
+
+    <div class="imagem1">
+    <center><img src="proa-logo.png"></center>
+    <br><br>
+    </div>
+
+    <h3>INFORMAÇÕES</h3>
+    <input type="text" placeholder="Nome">
+    <input type="text" placeholder="Data de Nascimento">
+    <input type="text" placeholder="Número de Celular">
+
+    <div class="btn-box">
+       <button type="button" id="Back1">Voltar</button> 
+       <button type="button" id="Next2">Proseguir</button> 
+    </div>
+</form>
+
+<form id="Form3">
+
+   <div class="imagem1">
+   <center><img src="proa-logo.png"></center>
+   <br><br>
+   </div>
+
+    <h3>REDES SOCIAIS</h3>
+    <input type="text" placeholder="Linkedin" required>
+    <input type="text" placeholder="GitHub" required>
+    <input type="text" placeholder="Facebook" required>
+   
+
+    <div class="btn-box">
+       <button type="button" id="Back2">Voltar</button> 
+       <button class="novobotao"><a href="index2.html" class="novobotao">Confirmar</a></button>
+    </div>
+</form>
+
+
+<dvi class="step-row">
+    <div id="progress"></div>
+    <div class="step-col"><Small><i class="fa-solid fa-envelope"></i></Small></div>
+    <div class="step-col"><Small><i class="fa-solid fa-user"></i></Small></div>
+    <div class="step-col"><Small><i class="fa-solid fa-circle-info"></i></Small></div>
+</dvi>
+
+</div>
+
+<script>
+    var Form1 = document.getElementById("Form1");
+    var Form2 = document.getElementById("Form2");
+    var Form3 = document.getElementById("Form3");
+    
+    var Next1 = document.getElementById("Next1");
+    var Next2 = document.getElementById("Next2");
+    var Back1 = document.getElementById("Back1");
+    var back2 = document.getElementById("back2");
+  
+    var progress = document.getElementById("progress");
+
+    Next1.onclick = function(){
+       Form1.style.left = "-450px";
+       Form2.style.left = "40px";
+       progress.style.width = "240px";
+    }
+
+    Back1.onclick = function(){
+       Form1.style.left = "40px";
+       Form2.style.left = "450px";
+       progress.style.width = "120px";
+    }
+
+    Next2.onclick = function(){
+       Form2.style.left = "-450px";
+       Form3.style.left = "40px";
+       progress.style.width = "360px";
+    }
+
+    Back2.onclick = function(){
+       Form2.style.left = "40px";
+       Form3.style.left = "450px";
+       progress.style.width = "240px";
+    }
+
+
+</script>
+
+
+</body>
+</html>
